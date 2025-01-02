@@ -17,28 +17,17 @@ const NavBar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-slate-50 text-custumColor p-2 h-12 flex items-center justify-between z-50 shadow-md">
+    <div className="fixed top-0 left-0 w-full bg-slate-50 text-custumColor p-2 h-16 sm:h-14 flex items-center justify-between z-50 shadow-md">
       {/* LOGO */}
-      <div>
-        <Image src="/logo.png" width={150} height={150} alt="logo" />
+      <div className="w-auto sm:w-28">
+        <Image src="/logo.png" width={120} height={120} alt="logo" className="w-full h-auto" />
       </div>
 
       {/* MOBILE HAMBURGER ICON */}
       <div className="lg:hidden flex items-center">
         <button onClick={toggleMenu} className="text-custumColor">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
@@ -64,7 +53,7 @@ const NavBar = () => {
         className={`lg:hidden absolute top-0 left-0 w-full h-screen bg-custumColor p-6 flex flex-col items-center transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         {links.map((link) => (
-          <Link href={link.url} key={link.id} className="text-white py-2" onClick={() => setIsMenuOpen(false)}>
+          <Link href={link.url} key={link.id} className="text-white py-2 text-xl" onClick={() => setIsMenuOpen(false)}>
             {link.title}
           </Link>
         ))}
@@ -76,6 +65,7 @@ const NavBar = () => {
         </button>
       </div>
     </div>
+
   )
 }
 

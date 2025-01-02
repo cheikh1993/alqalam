@@ -28,13 +28,13 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        <div className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-8 flex items-center gap-8 rounded-lg shadow-lg max-w-5xl w-full">
+        <div className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-8 rounded-lg shadow-lg max-w-5xl w-full">
           {/* Texte de bienvenue */}
-          <div className="flex flex-col justify-between text-white gap-5 max-w-lg">
-            <h1 className="text-4xl font-bold leading-tight text-shadow-md">
+          <div className="flex flex-col justify-between text-white gap-5 max-w-lg text-center sm:text-left">
+            <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-shadow-md">
               DES SOLUTIONS INFORMATIQUES INNOVANTES POUR VOTRE ENTREPRISE.
             </h1>
-            <p className="text-lg leading-relaxed">
+            <p className="text-base sm:text-lg leading-relaxed">
               Nous fournissons des services technologiques de pointe pour aider
               votre entreprise à prospérer à l’ère du numérique.
             </p>
@@ -57,6 +57,7 @@ const Home = () => {
         </div>
 
 
+
       </div>
 
       {/* Section des services */}
@@ -77,31 +78,27 @@ const Home = () => {
         </div>
       </div>
 
-      <section
-        className="py-20 bg-gray-50"
-        data-aos="fade-right"
-        data-aos-delay="600"
-      >
-        <div className="container mx-auto flex flex-wrap items-center justify-between gap-8 px-4 lg:px-0">
-          {/* <!-- Texte --> */}
-          <div className="max-w-lg flex flex-col gap-5">
-            <h2 className="text-4xl font-bold text-orange-500 leading-tight">
+      <section className="py-20 bg-gray-50" data-aos="fade-right" data-aos-delay="600">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 px-4 lg:px-0">
+          {/* Texte */}
+          <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
+            <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 leading-tight">
               Al Qalam Services
             </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Al Qalam Services est une entreprise dynamique et innovante opérant dans le secteur des services informatiques et technologiques. Bienvenue chez nous, votre partenaire de confiance pour des solutions innovantes en informatique et infographie. Nous combinons créativité, expertise technique et vision stratégique pour répondre à vos besoins numériques les plus exigeants.
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Al Qalam Services est une entreprise dynamique et innovante opérant dans le secteur des services informatiques et technologiques. Bienvenue chez nous, votre partenaire de confiance pour des solutions innovantes en informatique et infographie.
             </p>
             <button className="bg-orange-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
               A propos de nous
             </button>
           </div>
 
-          {/* <!-- Image --> */}
-          <div className="flex-shrink-0">
+          {/* Image */}
+          <div className="flex-shrink-0 w-full sm:w-auto">
             <Image
               src="/logo.png"
               alt="A propos de Al Qalam Services"
-              className="rounded-lg shadow-lg max-w-full"
+              className="rounded-lg shadow-lg max-w-full h-auto"
               width={430}
               height={450}
             />
@@ -109,29 +106,25 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white"
-        data-aos="fade-up"
-        data-aos-delay="800"
-      >
-        <div className="container mx-auto flex flex-wrap items-center justify-between gap-8 px-4 lg:px-0">
-          {/* <!-- Image --> */}
-          <div className="flex-shrink-0">
+      <section className="py-20 bg-white" data-aos="fade-up" data-aos-delay="800">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 px-4 lg:px-0">
+          {/* Image */}
+          <div className="flex-shrink-0 w-full sm:w-auto">
             <Image
               src="/value.jpg"
               alt="Valeurs de Al Qalam Services"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg max-w-full h-auto"
               width={300}
               height={400}
-
             />
           </div>
 
-          {/* <!-- Texte et icônes --> */}
-          <div className="max-w-lg flex flex-col gap-5">
-            <h2 className="text-4xl font-bold text-orange-500 leading-tight">
+          {/* Texte et icônes */}
+          <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
+            <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 leading-tight">
               Pourquoi choisir Al Qalam Services ?
             </h2>
-            <ul className="space-y-4 text-gray-700 text-lg">
+            <ul className="space-y-4 text-gray-700 text-base sm:text-lg">
               <li className="flex items-center gap-3">
                 <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -176,6 +169,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
       <Avis
 
