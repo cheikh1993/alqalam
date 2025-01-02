@@ -38,7 +38,7 @@ const ServicesPage = () => {
               <FaTools className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Maintenance & Réparation</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Réparation d'ordinateurs, téléphones, télévisions et autres appareils électroniques avec une garantie de satisfaction ou remboursement.
+                Réparation d&apos;ordinateurs, téléphones, télévisions et autres appareils électroniques avec une garantie de satisfaction ou remboursement.
               </p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
@@ -97,7 +97,7 @@ const ServicesPage = () => {
         <div className="text-center">
           <h2 className="text-4xl font-bold text-orange-500">Dieummeul</h2>
           <p className="text-lg text-gray-800 mt-4 max-w-3xl mx-auto">
-            Solutions avancées dans l'impression numérique et la fabrication assistée par ordinateur (CAO/FAO), y compris l'impression 3D.
+            Solutions avancées dans l&apos;impression numérique et la fabrication assistée par ordinateur (CAO/FAO), y compris l&apos;impression 3D.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-12">
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
@@ -111,14 +111,14 @@ const ServicesPage = () => {
               <FaCogs className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Impression 3D</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Création d'objets en 3D pour des projets innovants dans différents secteurs, notamment la publicité et l'architecture.
+                Création d&apos;objets en 3D pour des projets innovants dans différents secteurs, notamment la publicité et l&apos;architecture.
               </p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
               <FaCogs className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Impression 3D</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Création d'objets en 3D pour des projets innovants dans différents secteurs, notamment la publicité et l'architecture.
+                Création d&apos;objets en 3D pour des projets innovants dans différents secteurs, notamment la publicité et l&apos;architecture.
               </p>
             </div>
           </div>
@@ -147,28 +147,28 @@ const ServicesPage = () => {
         <div className="text-center">
           <h2 className="text-4xl font-bold text-orange-500">Woyofal</h2>
           <p className="text-lg text-gray-800 mt-4 max-w-3xl mx-auto">
-            Logiciels innovants pour l'automatisation des tâches dans différents secteurs économiques, permettant une gestion efficace des ressources.
+            Logiciels innovants pour l&apos;automatisation des tâches dans différents secteurs économiques, permettant une gestion efficace des ressources.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-12">
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
               <FaCogs className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Gestion des Ressources</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Outils pour la gestion des locations, ressources dans les entreprises, écoles, et autres secteurs d'activité.
+                Outils pour la gestion des locations, ressources dans les entreprises, écoles, et autres secteurs d&apos;activité.
               </p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
               <FaDesktop className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Logiciel de Conception</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Conception en 1D, 2D, et 3D pour la création de plans et structures complexes, notamment pour l'architecture et l'ingénierie.
+                Conception en 1D, 2D, et 3D pour la création de plans et structures complexes, notamment pour l&apos;architecture et l&apos;ingénierie.
               </p>
             </div>
             <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-xl transform transition-transform duration-300 hover:scale-105">
               <FaDesktop className="text-6xl text-orange-500 mb-4" />
               <h3 className="text-xl font-semibold text-orange-500">Logiciel de Conception</h3>
               <p className="text-gray-600 mt-2 text-center">
-                Conception en 1D, 2D, et 3D pour la création de plans et structures complexes, notamment pour l'architecture et l'ingénierie.
+                Conception en 1D, 2D, et 3D pour la création de plans et structures complexes, notamment pour l&apos;architecture et l&apos;ingénierie.
               </p>
             </div>
           </div>

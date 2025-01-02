@@ -8,7 +8,7 @@ const Contact = () => {
         Prêt à transformer votre entreprise ?
       </h2>
       <p className="mt-4 text-lg max-w-2xl mx-auto">
-        Rejoignez des centaines d'entreprises qui utilisent nos solutions pour réussir dans le monde numérique.
+        Rejoignez des centaines d&apos;entreprises qui utilisent nos solutions pour réussir dans le monde numérique.
       </p>
 
       <div className="mt-8">
@@ -17,7 +17,6 @@ const Contact = () => {
         </Link>
       </div>
     </section>
-
   )
 }
 

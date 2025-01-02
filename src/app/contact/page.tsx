@@ -13,7 +13,7 @@ const ContactPage = () => {
           </h1>
           <p className="text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
             Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets.
-            N'hésitez pas à nous écrire et à collaborer pour transformer vos idées en réalité.
+            N&apos;hésitez pas à nous écrire et à collaborer pour transformer vos idées en réalité.
           </p>
           <div className="mt-10">
             <a
@@ -24,8 +24,6 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* Contact Details */}
       <section className="container mx-auto py-16 px-4 lg:px-0">
