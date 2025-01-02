@@ -1,101 +1,194 @@
-import Image from "next/image";
+'use client'
+import Image from 'next/image'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ServiceCard from './components/ServiceCard';
+import Avis from './components/sections/Avis';
+import Contact from './components/sections/Contact';
+import Faq from './components/sections/Faq';
+import Demo from './components/sections/Demo';
+import Partner from './components/sections/Partner';
+import Blog from './components/sections/Blog';
+import Network from './components/sections/Network';
 
-export default function Home() {
+
+const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durée de l'animation en millisecondes
+      once: true, // L'animation se déclenche une seule fois
+    });
+  }, []);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      {/* Section de bienvenue */}
+      <div
+        className="flex items-center justify-center py-20 bg-gray-50"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-8 flex items-center gap-8 rounded-lg shadow-lg max-w-5xl w-full">
+          {/* Texte de bienvenue */}
+          <div className="flex flex-col justify-between text-white gap-5 max-w-lg">
+            <h1 className="text-4xl font-bold leading-tight text-shadow-md">
+              DES SOLUTIONS INFORMATIQUES INNOVANTES POUR VOTRE ENTREPRISE.
+            </h1>
+            <p className="text-lg leading-relaxed">
+              Nous fournissons des services technologiques de pointe pour aider
+              votre entreprise à prospérer à l’ère du numérique.
+            </p>
+            <button className="bg-white text-orange-500 px-6 py-2 rounded-md shadow-md hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-orange-400">
+              Savoir Plus
+            </button>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {/* Image */}
+          <div className="flex-shrink-0 w-full sm:w-auto">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/img.jpg"
+              width={500}
+              height={500}
+              alt="Solutions informatiques"
+              className="rounded-md transform hover:scale-105 transition-all"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+
+      </div>
+
+      {/* Section des services */}
+      <div className="py-10 bg-white"
+        data-aos="fade-left"
+        data-aos-delay="400">
+        <h2 className="text-4xl font-bold text-center text-orange-500 leading-tight">Nos Service Chez Alqalam-Service</h2>
+        <div className="p-4 flex items-center gap-8 justify-center flex-wrap">
+          <ServiceCard
+            position='fade-left'
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <ServiceCard
+            position='fade-right'
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <ServiceCard
+            position='fade-up'
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+
+      <section
+        className="py-20 bg-gray-50"
+        data-aos="fade-right"
+        data-aos-delay="600"
+      >
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-8 px-4 lg:px-0">
+          {/* <!-- Texte --> */}
+          <div className="max-w-lg flex flex-col gap-5">
+            <h2 className="text-4xl font-bold text-orange-500 leading-tight">
+              Al Qalam Services
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Al Qalam Services est une entreprise dynamique et innovante opérant dans le secteur des services informatiques et technologiques. Bienvenue chez nous, votre partenaire de confiance pour des solutions innovantes en informatique et infographie. Nous combinons créativité, expertise technique et vision stratégique pour répondre à vos besoins numériques les plus exigeants.
+            </p>
+            <button className="bg-orange-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
+              A propos de nous
+            </button>
+          </div>
+
+          {/* <!-- Image --> */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="A propos de Al Qalam Services"
+              className="rounded-lg shadow-lg max-w-full"
+              width={430}
+              height={450}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white"
+        data-aos="fade-up"
+        data-aos-delay="800"
+      >
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-8 px-4 lg:px-0">
+          {/* <!-- Image --> */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/value.jpg"
+              alt="Valeurs de Al Qalam Services"
+              className="rounded-lg shadow-lg"
+              width={300}
+              height={400}
+
+            />
+          </div>
+
+          {/* <!-- Texte et icônes --> */}
+          <div className="max-w-lg flex flex-col gap-5">
+            <h2 className="text-4xl font-bold text-orange-500 leading-tight">
+              Pourquoi choisir Al Qalam Services ?
+            </h2>
+            <ul className="space-y-4 text-gray-700 text-lg">
+              <li className="flex items-center gap-3">
+                <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                Rapport qualité prix
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                Meilleure offre au meilleur prix
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                Service de qualité
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                Service personnalisé
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-green-500 flex items-center justify-center w-10 h-10 rounded-full bg-green-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                Assistance efficace
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <Avis
+
+      />
+      <Contact />
+      <Faq />
+      <Demo />
+      <Partner />
+      <Blog />
+      <Network />
+
     </div>
-  );
+  )
 }
+
+export default Home
