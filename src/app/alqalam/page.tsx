@@ -18,7 +18,8 @@ const values = [
     title: 'Excellence',
     description: 'Offrir des services de qualité supérieure.',
   },
-]
+];
+
 const AboutUs = () => {
   return (
     <div className="bg-gray-50 py-16 px-4 lg:px-16">
@@ -60,7 +61,7 @@ const AboutUs = () => {
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-blue-500 mb-6">Notre Mission</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Participer activement au développement technologique de l'Afrique en promouvant les métiers du numérique et en sensibilisant la jeunesse à un usage responsable.
+              Participer activement au développement technologique de l&apos;Afrique en promouvant les métiers du numérique et en sensibilisant la jeunesse à un usage responsable.
             </p>
           </div>
         </div>
