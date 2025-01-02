@@ -20,7 +20,7 @@ const NavBar = () => {
     <div className="fixed top-0 left-0 w-full bg-slate-50 text-custumColor p-2 h-16 sm:h-14 flex items-center justify-between z-50 shadow-md">
       {/* LOGO */}
       <div className="w-auto sm:w-28">
-        <Image src="/logo.png" width={120} height={120} alt="logo" className="w-full h-auto" />
+        <Image src="/logo.png" width={80} height={80} alt="logo" className="w-full h-auto" />
       </div>
 
       {/* MOBILE HAMBURGER ICON */}

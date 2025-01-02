@@ -27,15 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head lang="fr">
-<link rel="stylesheet" href="/logo.png" />
+        <link rel="stylesheet" href="/logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <div>
-        <NavBar />
-        {children}
-        <Footer />
+        <div className="overflow-hidden">
+          <NavBar />
+          {children}
+          <Footer />
         </div>
       </body>
     </html>

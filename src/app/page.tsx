@@ -24,7 +24,7 @@ const Home = () => {
     <div>
       {/* Section de bienvenue */}
       <div
-        className="flex items-center justify-center py-20 bg-gray-50"
+        className="flex items-center justify-center py-20 bg-gray-50 overflow-hidden"
         data-aos="fade-up"
         data-aos-delay="400"
       >
