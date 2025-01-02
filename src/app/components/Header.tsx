@@ -8,7 +8,7 @@ const Header = () => {
     const [open ,setOpen] = useState(false)
   return (
     <div className='h-12 bg-custumColor px-2 text-white py-1 flex justify-between items-center '>
-      <div className='hidden md:flex gap-4 flex items-center' >
+      <div className='hidden md:flex gap-4  items-center' >
         <div >
                   <Image src={"/logo.png"} alt='logo' width={70} height={70} />
 
