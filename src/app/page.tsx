@@ -25,52 +25,38 @@ const Home = () => {
     <div>
       {/* Section de bienvenue */}
       <div
-        className="flex items-center justify-center mt-4 bg-gray-50 overflow-hidden"
-        data-aos="fade-up"
+        className="flex items-center justify-center mt-8 bg-gray-50 overflow-hidden"
+        data-aos="fade-in"
         data-aos-delay="400"
       >
         <div
-          className="flex items-center justify-center mt-4 bg-gray-50 overflow-hidden"
+          className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 p-8 sm:p-12 text-white overflow-hidden"
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          <div className="relative min-h-screen bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 p-6 sm:p-12 flex items-center justify-center text-white rounded-lg shadow-xl overflow-hidden">
+          {/* Arrière-plan flou */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-40"
+            style={{ backgroundImage: 'url(/img.jpg)' }}
+          ></div>
 
-            {/* Arrière-plan flou */}
-            <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: 'url(/img.jpg)' }}></div>
-
-            {/* Contenu principal */}
-            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8 max-w-7xl w-full">
-
-              {/* Texte de bienvenue */}
-              <div className="flex flex-col justify-between text-center sm:text-left gap-6 sm:gap-8 max-w-lg">
-                <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-shadow-md">
-                  DES SOLUTIONS INFORMATIQUES INNOVANTES POUR VOTRE ENTREPRISE
-                </h1>
-                <p className="text-lg sm:text-xl leading-relaxed">
-                  Nous fournissons des services technologiques de pointe pour aider
-                  votre entreprise à prospérer à l’ère du numérique.
-                </p>
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50">
-                  Savoir Plus
-                </button>
-              </div>
-
-              {/* Image */}
-              <div className="flex-shrink-0 w-full sm:w-auto">
-                <Image
-                  src="/img.jpg"
-                  width={600}
-                  height={600}
-                  alt="Solutions informatiques"
-                  className="rounded-md transform transition-all hover:scale-105"
-                  priority
-                />
-              </div>
-
+          {/* Contenu principal */}
+          <div className="relative z-10 text-center max-w-6xl w-full px-4">
+            <h1 className="text-5xl sm:text-6xl  font-extrabold leading-6 tracking-tight text-shadow-md">
+              DES SOLUTIONS INFORMATIQUES INNOVANTES POUR VOTRE ENTREPRISE
+            </h1>
+            <p className="mt-6 text-lg sm:text-2xl leading-relaxed">
+              Accélérez la croissance de votre entreprise grâce à des services technologiques de pointe conçus pour répondre à vos besoins.
+            </p>
+            <div className="mt-8">
+              <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50">
+                Savoir Plus
+              </button>
             </div>
           </div>
         </div>
+
+
 
 
 
@@ -82,7 +68,7 @@ const Home = () => {
       <div className="py-10 bg-white"
         data-aos="fade-left"
         data-aos-delay="400">
-        <h2 className="text-4xl font-bold text-center text-orange-500 leading-tight">Nos Service Chez Alqalam-Service</h2>
+        <h2 className="text-4xl font-bold text-center text-custumColor leading-tight">Nos Service Chez Alqalam-Service</h2>
         <div className="p-4 flex items-center gap-8 justify-center flex-wrap">
           <ServiceCard
             position='fade-left'
@@ -100,13 +86,13 @@ const Home = () => {
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 px-4 lg:px-0">
           {/* Texte */}
           <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-custumColor leading-tight">
               Al Qalam Services
             </h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               Al Qalam Services est une entreprise dynamique et innovante opérant dans le secteur des services informatiques et technologiques. Bienvenue chez nous, votre partenaire de confiance pour des solutions innovantes en informatique et infographie.
             </p>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
+            <button className="bg-custumColor text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
               A propos de nous
             </button>
           </div>
@@ -139,7 +125,7 @@ const Home = () => {
 
           {/* Texte et icônes */}
           <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-custumColor leading-tight">
               Pourquoi choisir Al Qalam Services ?
             </h2>
             <ul className="space-y-4 text-gray-700 text-base sm:text-lg">
