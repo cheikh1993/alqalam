@@ -1,6 +1,10 @@
-"use client"
-import { FaTools, FaDesktop, FaPrint, FaFileAlt, FaCogs, FaRegCalendarCheck } from 'react-icons/fa';
 
+import { Metadata } from 'next';
+import { FaTools, FaDesktop, FaPrint, FaFileAlt, FaCogs, FaRegCalendarCheck } from 'react-icons/fa';
+export const metadata: Metadata = {
+  title: "Alqalam service service",
+  description: "Votre solution pour votre entreprise",
+};
 const ServicesPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">

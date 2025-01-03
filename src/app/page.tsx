@@ -13,6 +13,7 @@ import Blog from './components/sections/Blog';
 import Network from './components/sections/Network';
 
 
+
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -24,11 +25,11 @@ const Home = () => {
     <div>
       {/* Section de bienvenue */}
       <div
-        className="flex items-center justify-center py-20 bg-gray-50 overflow-hidden"
+        className="flex items-center justify-center mt-20 px-4 bg-gray-50 overflow-hidden"
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        <div className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-8 rounded-lg shadow-lg max-w-5xl w-full">
+        <div className="bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-8 rounded-lg shadow-lg max-w-7xl w-full">
           {/* Texte de bienvenue */}
           <div className="flex flex-col justify-between text-white gap-5 max-w-lg text-center sm:text-left">
             <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-shadow-md">
