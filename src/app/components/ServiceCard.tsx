@@ -26,7 +26,7 @@ const ServiceCard: React.FC<PositionProps> = ({ position }) => {
 
             {/* Contenu */}
             <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-bold text-orange-500">
+                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
                     Maintenance Informatique
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -36,7 +36,7 @@ const ServiceCard: React.FC<PositionProps> = ({ position }) => {
             </div>
 
             {/* Bouton */}
-            <button className="bg-orange-500 text-white py-2 px-4 rounded-md mt-2 self-start hover:bg-orange-600 transition-all ease-in-out duration-300">
+            <button className="py-2 px-4 mt-2 self-start rounded-md text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 transition-all ease-in-out duration-300">
                 En savoir plus
             </button>
 

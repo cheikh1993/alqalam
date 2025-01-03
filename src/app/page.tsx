@@ -12,8 +12,6 @@ import Partner from './components/sections/Partner';
 import Blog from './components/sections/Blog';
 import Network from './components/sections/Network';
 
-
-
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -21,78 +19,56 @@ const Home = () => {
       once: true, // L'animation se déclenche une seule fois
     });
   }, []);
+
   return (
     <div>
       {/* Section de bienvenue */}
-      <div
-        className="flex items-center justify-center mt-8 bg-gray-50 overflow-hidden"
-        data-aos="fade-in"
-        data-aos-delay="400"
-      >
-        <div
-          className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 p-8 sm:p-12 text-white overflow-hidden"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
+      <div className="flex items-center justify-center mt-8 bg-gray-50 overflow-hidden">
+        <div className="relative flex items-center justify-center w-full min-h-screen bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 p-8 sm:p-12 text-white overflow-hidden">
           {/* Arrière-plan flou */}
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-40"
+            className="absolute inset-0 bg-cover bg-center opacity-65"
             style={{ backgroundImage: 'url(/img.jpg)' }}
           ></div>
 
           {/* Contenu principal */}
           <div className="relative z-10 text-center max-w-6xl w-full px-4">
-            <h1 className="text-5xl sm:text-6xl  font-extrabold leading-6 tracking-tight text-shadow-md">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug sm:leading-tight tracking-tight text-white text-transparent bg-clip-text px-4 sm:px-0">
               DES SOLUTIONS INFORMATIQUES INNOVANTES POUR VOTRE ENTREPRISE
             </h1>
             <p className="mt-6 text-lg sm:text-2xl leading-relaxed">
               Accélérez la croissance de votre entreprise grâce à des services technologiques de pointe conçus pour répondre à vos besoins.
             </p>
             <div className="mt-8">
-              <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50">
+              <button className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-50">
                 Savoir Plus
               </button>
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
       </div>
 
       {/* Section des services */}
-      <div className="py-10 bg-white"
-        data-aos="fade-left"
-        data-aos-delay="400">
-        <h2 className="text-4xl font-bold text-center text-custumColor leading-tight">Nos Service Chez Alqalam-Service</h2>
+      <div className="py-10 bg-white" data-aos="fade-left" data-aos-delay="400">
+        <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-teal-500 leading-tight">Nos Service Chez Alqalam-Service</h2>
         <div className="p-4 flex items-center gap-8 justify-center flex-wrap">
-          <ServiceCard
-            position='fade-left'
-          />
-          <ServiceCard
-            position='fade-right'
-          />
-          <ServiceCard
-            position='fade-up'
-          />
+          <ServiceCard position='fade-left' />
+          <ServiceCard position='fade-right' />
+          <ServiceCard position='fade-up' />
         </div>
       </div>
 
-      <section className="py-20 bg-gray-50" data-aos="fade-right" data-aos-delay="600">
+      <section className="py-20 bg-gray-50 flex" data-aos="fade-right" data-aos-delay="600">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 px-4 lg:px-0">
           {/* Texte */}
           <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold text-custumColor leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-teal-500 leading-tight">
               Al Qalam Services
             </h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               Al Qalam Services est une entreprise dynamique et innovante opérant dans le secteur des services informatiques et technologiques. Bienvenue chez nous, votre partenaire de confiance pour des solutions innovantes en informatique et infographie.
             </p>
-            <button className="bg-custumColor text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
+            <button className="bg-gradient-to-br from-orange-500 via-yellow-500 to-pink-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-orange-600 transition">
               A propos de nous
             </button>
           </div>
@@ -125,7 +101,7 @@ const Home = () => {
 
           {/* Texte et icônes */}
           <div className="max-w-lg flex flex-col gap-5 text-center sm:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold text-custumColor leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-teal-500 leading-tight">
               Pourquoi choisir Al Qalam Services ?
             </h2>
             <ul className="space-y-4 text-gray-700 text-base sm:text-lg">
@@ -174,19 +150,15 @@ const Home = () => {
         </div>
       </section>
 
-
-      <Avis
-
-      />
+      <Avis />
       <Contact />
       <Faq />
       <Demo />
       <Partner />
       <Blog />
       <Network />
-
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
